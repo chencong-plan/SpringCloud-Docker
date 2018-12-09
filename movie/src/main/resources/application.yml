@@ -1,0 +1,16 @@
+# 程序启动端口，默认就是8080 不配置则使用默认端口。
+server:
+  port: 8080
+# 应用名称，可以作为程序地址栏访问名称，注册eureka服务中心的名字
+spring:
+  application:
+    name: movie
+  # 连接数据库的系列配置
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: chencong
+    password: 1042738887Cc
+    url: jdbc:mysql://118.25.194.100:3308/springCloud-docker?characterEncoding=utf-8&useSSL=false
+  #  使用JPA,在此打印日志
+  jpa:
+    show-sql: true
