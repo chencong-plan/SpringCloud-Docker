@@ -14,3 +14,25 @@ spring:
 #  使用JPA,在此打印日志
   jpa:
     show-sql: true
+
+
+management:
+  server:
+    servlet:
+      context-path: "/management"
+    port: 8088
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: "/monitor"
+  endpoint:
+    shutdown:
+      enabled: true
+info:
+  app:
+    name: "@project.artifactId@"
+    encoding: '@project.build.sourceEncoding@'
+    java:
+      source: '@java.version@'
+      target: '@java.version@'
