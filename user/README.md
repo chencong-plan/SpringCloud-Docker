@@ -40,29 +40,5 @@ spring:
 
 ### 整合SpringBoot Actuator
 该模块增加了很多监控点，使用`http://{ip}:{port}/{endpoint}`来访问这些断点，了解程序的运行情况。
-
-|端点名称|描述|方法类型|
-|---|---|---|
-|autoconfig|显示自动配置的信息|GET|
-
-配置actuator，访问info仍然是没有任何信息，现在可以在application.yml中配置可应用的一些启动信息。
-配置如下：
-```json
-{
-    "_links": {
-        "self": {
-            "href": "http://localhost:8080/actuator",
-            "templated": false
-        },
-        "health": {
-            "href": "http://localhost:8080/actuator/health",
-            "templated": false
-        },
-        "info": {
-            "href": "http://localhost:8080/actuator/info",
-            "templated": false
-        }
-    }
-}
-```
+详细配置见Application.yml中
 
