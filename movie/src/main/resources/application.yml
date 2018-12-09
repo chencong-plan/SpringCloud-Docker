@@ -1,16 +1,16 @@
-# ³ÌĞòÆô¶¯¶Ë¿Ú£¬Ä¬ÈÏ¾ÍÊÇ8080 ²»ÅäÖÃÔòÊ¹ÓÃÄ¬ÈÏ¶Ë¿Ú¡£
+# ç¨‹åºå¯åŠ¨ç«¯å£ï¼Œé»˜è®¤å°±æ˜¯8080 ä¸é…ç½®åˆ™ä½¿ç”¨é»˜è®¤ç«¯å£ã€‚
 server:
-  port: 8080
-# Ó¦ÓÃÃû³Æ£¬¿ÉÒÔ×÷Îª³ÌĞòµØÖ·À¸·ÃÎÊÃû³Æ£¬×¢²áeureka·şÎñÖĞĞÄµÄÃû×Ö
+  port: 8090
+# åº”ç”¨åç§°ï¼Œå¯ä»¥ä½œä¸ºç¨‹åºåœ°å€æ è®¿é—®åç§°ï¼Œæ³¨å†ŒeurekaæœåŠ¡ä¸­å¿ƒçš„åå­—
 spring:
   application:
     name: movie
-  # Á¬½ÓÊı¾İ¿âµÄÏµÁĞÅäÖÃ
+  # è¿æ¥æ•°æ®åº“çš„ç³»åˆ—é…ç½®
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: chencong
     password: 1042738887Cc
     url: jdbc:mysql://118.25.194.100:3308/springCloud-docker?characterEncoding=utf-8&useSSL=false
-  #  Ê¹ÓÃJPA,ÔÚ´Ë´òÓ¡ÈÕÖ¾
+  #  ä½¿ç”¨JPA,åœ¨æ­¤æ‰“å°æ—¥å¿—
   jpa:
     show-sql: true
