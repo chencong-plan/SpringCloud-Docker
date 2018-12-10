@@ -5,15 +5,19 @@ server:
 spring:
   application:
     name: user
-# 连接数据库的系列配置
+  # 连接数据库的系列配置
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: chencong
     password: 1042738887Cc
     url: jdbc:mysql://118.25.194.100:3308/springCloud-docker?characterEncoding=utf-8&useSSL=false
-#  使用JPA,在此打印日志
+  #  使用JPA,在此打印日志
   jpa:
     show-sql: true
+  #    返回固定格式时间，默认情况返回的相差8个时差
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
 
 
 management:

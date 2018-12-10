@@ -10,4 +10,7 @@ public interface UserService {
 
     User findById(Long id);
 
+    User addUser(User user);
+
+    Long deleteUserById(Long id);
 }

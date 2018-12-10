@@ -19,7 +19,7 @@ public class User {
      * 主键，自增
      */
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String username;

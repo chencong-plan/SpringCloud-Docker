@@ -4,9 +4,7 @@ import cc.ccoder.springclouddocker.user.pojo.User;
 import cc.ccoder.springclouddocker.user.repository.UserRepository;
 import cc.ccoder.springclouddocker.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author 聪聪 www.ccoder.cc
@@ -22,9 +20,21 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/user/{id}")
     public User findById(@PathVariable Long id) {
         User user = this.userService.findById(id);
         return user;
+    }
+
+    @PostMapping("/add")
+    public User addUser(User user) {
+        User result = userService.addUser(user);
+        return user;
+    }
+
+    @DeleteMapping("/user/{id}")
+    public String deleteUserById(@PathVariable Long id) {
+        Long result = userService.deleteUserById(id);
+        return result == null ? "error" : "success";
     }
 }
